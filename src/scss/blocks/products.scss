@@ -1,0 +1,154 @@
+.products {
+  width: 100%;
+  height: auto;
+
+  &__wrap {
+    border-top: 1px solid #667;
+    padding: 35px 5px 65px;
+
+    @include for-size('max', 'sm') {
+      padding: 35px 5px 45px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-size('max', 'xl') {
+      justify-content: space-around;
+    }
+
+    @include for-size('max', 'lg') {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 32%;
+    min-width: 320px;
+    height: 250px;
+    margin: 6px;
+    background: url('../../assets/images/gallery/adv_img1.jpg'), center center / contain no-repeat;
+
+    @include for-size('max', 'xl') {
+      width: 48%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.img-active {
+  background: black;
+  opacity: 0.1;
+
+  span {
+    display: flex;
+    color: white;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slider{
+  display: none;
+  width: 800px;
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  //height: 300px;
+  height: auto;
+
+  @include for-size('max', 'lg') {
+    display: block;
+  }
+}
+.slider .item img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.slider .prev, .slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideText {
+  position: absolute;
+  color: #fff;
+  font-size: 35px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+.slider-dots {
+  text-align: center;
+}
+.slider-dots_item{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+  background-color: #aaa;
+}
+
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+

@@ -1,0 +1,39 @@
+.marketplace {
+  padding: 30px 0 40px;
+  background: #2C2934;
+  height: auto;
+
+  @include for-size('max', 'xl') {
+    padding: 10px 10px 30px;
+  }
+
+  &__title {
+    color: white;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+
+    @include for-size('max', 'lg') {
+      padding: 15px 0;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+
+    @include for-size('max', 'lg') {
+      margin: 10px;
+    }
+  }
+
+}

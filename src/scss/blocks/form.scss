@@ -1,0 +1,62 @@
+.form {
+  font-family: 'SFPro', sans-serif;
+  padding: 10px 15px 40px;
+  height: auto;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__email {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px 10px;
+    border: 2px solid #2C2934;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  &__submit {
+    padding: 12px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #2C2934;
+    background: white;
+
+    &:hover {
+      color: white;
+      background: #2C2934;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'SFPro', sans-serif;
+
+  &__empty {
+    display: none;
+  }
+
+  &__no-valid {
+    display: none;
+  }
+}
+
